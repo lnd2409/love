@@ -1,7 +1,7 @@
 /* general styling */
-:root {
+/* :root {
     --smaller: .75;
-  }
+  } */
   
   * {
     box-sizing: border-box;
@@ -17,7 +17,7 @@
   body {
     align-items: center;
     background-color: #ffd54f;
-    display: flex;
+    /* display: flex; */
     font-family: -apple-system, 
       BlinkMacSystemFont, 
       "Segoe UI", 
@@ -66,12 +66,13 @@
   .container-2 {
     color: #333;
     margin: 0 auto;
+    
   }
   .container-2 > ul > li {
     display: block;
     font-size: 1.5em;
     list-style-type: none;
-    text-align: left;
+    text-align: center;
     text-transform: uppercase;
   }
 
