@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.gallery {
+    position: absolute;
+    top:75PX;
+    left:0;   
+    right:0;
+    margin:0 auto;       	
+    width: 20em;
+    height: 20em;
+    transform-style: preserve-3d;           
+    list-style: none;
+    
+    
+   
+}
+
+@keyframes rotate {
+ from {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+    
+}
+
+.gallery li, .gallery a, .gallery img {
+    /*height: 100%;*/
+    height: 100%;
+}
+
+.gallery li {
+    overflow: hidden;
+    position: absolute;
+    bottom: 6.7%;
+    left: 0;
+   transition: transform 0.2s ease-in;
+}
+
+    .gallery li:first-child {
+        /* translate value should be l*sqrt(3)/6 = 20em*.288675 = 5.7735em */
+        /* so why doesn't that work out right? */
+        transform: rotateY(180deg) rotateX(19.471221deg) translateZ(2.62em);
+    }
+
+    .gallery li:nth-child(2) {
+        transform: rotateY(60deg) rotateX(19.471221deg) translateZ(2.62em);
+    }
+
+    .gallery li:nth-child(3) {
+        transform: rotateY(-60deg) rotateX(19.471221deg) translateZ(2.62em);
+    }
+
+    .gallery li:nth-child(4) {
+            -webkit-transform: rotateX(90.100289deg) rotateY(0.572958deg) rotateZ(-0.427042deg) translateY(13px);
+            transform: rotateX(90.100289deg) rotateY(0.572958deg) rotateZ(-0.427042deg) translateY(13px);
+            bottom:-96px;
+    }
+
+    .gallery li:nth-child(4) a{
+        transform:translateY(-30%) rotate(30deg) skewY(30deg) scaleX(0.866);
+    }
+    
+    .gallery li:nth-child(4) a img{
+        transform:scaleX(1.155) skewY(-31deg) rotate(-29deg) translateY(50%);
+    }
+    .gallery li:after {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        color: white;
+       
+    }
+
+.gallery a, .gallery img {
+    display: block;
+    width:300px;
+    height:300px;
+
+}
+
+.gallery a {
+    overflow: hidden;
+    transform: translateY(50%) rotate(30deg) skewY(30deg) scaleX(.866);
+}
+
+.gallery img {
+    transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-50%);
+}
+
+.gallery {
+    animation: rotate 8s infinite linear;
+}
